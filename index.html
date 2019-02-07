@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reg</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <script src="main.js"></script>
+    <script>
+        window.onload = () => {
+
+            // 1 & 2
+            //Вставляем любой подобный диалог в поле, по нажатию меняются кавычки в начале и конце каждой реплики
+            let rbtn = document.getElementById('replace');
+
+            rbtn.onclick = (e) => {
+                let ftext = document.getElementById('text').value;
+                e.preventDefault();
+                let result = ftext
+                    .replace(/:\s'/g, ': "')
+                    .replace(/'\n/g, '"\n')
+                    .replace(/'$/i, '"');
+                console.log(result);
+            };
+
+            //3
+            let form = new Validator('myform')._submiform();
+        }
+    </script>
+</head>
+<body>
+<main>
+    <form action="#" method="post" name="quotes" id="quotes" class="form">
+        <div class="caption">Вставьте фрагмент текста</div>
+        <textarea name="text" id="text" value=""></textarea>
+        <button id="replace">Заменить</button>
+    </form>
+
+    <form action="#" method="post" name="myform" id="myform" class="form">
+        <div class="caption">Отправьте данные</div>
+        <input id="name" type="text" placeholder="Имя" name="name"><label for="name"></label>
+        <input id="phone" type="text" placeholder="Телефон" name="phone"><label for="phone"></label>
+        <input id="email" type="text" placeholder="e-mail" name="email"><label for="email"></label>
+        <textarea id="message" name="message" placeholder="Сообщение"></textarea><label for="message"></label>
+        <input type="submit" value="Отправить">
+    </form>
+
+</main>
+
+</body>
+</html>

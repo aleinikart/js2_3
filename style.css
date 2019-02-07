@@ -1,0 +1,39 @@
+.form{
+    display: block;
+    width: 300px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    padding: 15px;
+    background-color: #999;
+    margin-bottom: 50px;
+}
+
+.form *{
+    font-family: sans-serif;
+}
+.form .caption{
+    color: #fff;
+    font-size: 18px;
+}
+.form input,
+.form label,
+.form button,
+.form textarea{
+    width: 100%;
+    margin: 10px 0;
+    display: block;
+}
+
+.form textarea{
+    min-height: 80px;
+}
+
+.error{
+    border: 1px solid #f00;
+}
+.errorinfo{
+    background-color: #f00;
+    color: #fff;
+    padding: 3px;
+    font-size: 10px;
+}
